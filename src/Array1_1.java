@@ -1,3 +1,8 @@
+/*
+Array1_1:在不改变数组值且不使用辅助数组的条件下，查找数组中的重复元素
+P43
+ */
+
 import java.util.*;
 public class Array1_1 {
     private int array1_1(int[] a,int n ){
