@@ -1,10 +1,11 @@
 import java.util.*;
 public class Test {
     public static void main(String[] args) {
-        String str = "helloword";
-        System.out.println(str.charAt(0));
-        System.out.println(str.charAt(0) - 'a');
-
+        int diff = 4 ^ 6;
+        System.out.println(Integer.toBinaryString(diff));
+        System.out.println(Integer.toBinaryString(-diff));
+        diff &= - diff;
+        System.out.println(Integer.toBinaryString(diff));
         //空串和null
         /*
         String[] a = new String[10];
