@@ -1,11 +1,29 @@
 import java.util.*;
 public class Test {
+    public boolean Find(int target, int [][] array) {
+        int rows = array.length;
+        int col = array[0].length;
+        int startRow = rows - 1;
+        int startCol = 0;
+        while(startRow >= 0 && startCol <= col - 1){
+            System.out.println(startRow + "-----------" + startCol);
+            if(array[startRow][startCol] > target){
+                startRow --;
+            }
+            else if(array[startRow][startCol] < target){
+                startCol ++;
+            }
+            else if(array[startRow][startCol] == target){
+                return true;
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
-        int diff = 4 ^ 6;
-        System.out.println(Integer.toBinaryString(diff));
-        System.out.println(Integer.toBinaryString(-diff));
-        diff &= - diff;
-        System.out.println(Integer.toBinaryString(diff));
+        int target  = 7;
+        int[][] array = {{1,2,3,4},{5,6,7,8}};
+        Test t = new Test();
+        t.Find(target,array);
         //空串和null
         /*
         String[] a = new String[10];
